@@ -5,7 +5,7 @@ body::before {
 
 /* Letter Container */
 .letter-container {
-    max-width: 800px;
+    max-width: 950px; /* Increased from 800px for better width */
     margin: 0 auto 60px;
     padding: 0 20px;
 }
@@ -18,12 +18,12 @@ body::before {
     position: relative;
     font-family: 'Playfair Display', serif;
     color: var(--text-dark);
-    /* Create notebook lines - 32px spacing */
+    /* Create notebook lines - 36px spacing for better readability */
     background-image: repeating-linear-gradient(
         transparent,
-        transparent 31px,
-        rgba(139, 69, 19, 0.2) 31px,
-        rgba(139, 69, 19, 0.2) 32px
+        transparent 35px,
+        rgba(139, 69, 19, 0.2) 35px,
+        rgba(139, 69, 19, 0.2) 36px
     );
     /* Performance optimization */
     will-change: transform;
@@ -32,17 +32,17 @@ body::before {
 
 /* Letter Header */
 .letter-header {
-    padding: 32px 50px 0 50px; /* Start exactly on first line */
+    padding: 36px 60px 0 60px; /* Increased horizontal padding and match new line spacing */
     margin: 0;
 }
 
 .date {
     text-align: right;
-    font-size: 1rem;
+    font-size: 1.1rem; /* Increased from 1rem */
     color: var(--primary-color);
     font-weight: 600;
-    line-height: 32px; /* Match line spacing exactly */
-    height: 32px; /* Occupy exactly one line */
+    line-height: 36px; /* Match new line spacing exactly */
+    height: 36px; /* Occupy exactly one line */
     margin: 0;
     padding: 0;
     display: flex;
@@ -51,14 +51,14 @@ body::before {
 }
 
 .greeting {
-    font-size: 1.4rem;
+    font-size: 1.5rem; /* Increased from 1.4rem */
     font-weight: 700;
     color: var(--text-dark);
     font-family: 'Dancing Script', cursive;
     opacity: 0; /* Hide initially for typing animation */
-    line-height: 32px; /* Match line spacing exactly */
-    height: 32px; /* Occupy exactly one line */
-    margin: 32px 0 0 0; /* Skip one line */
+    line-height: 36px; /* Match new line spacing exactly */
+    height: 36px; /* Occupy exactly one line */
+    margin: 36px 0 0 0; /* Skip one line with new spacing */
     padding: 0;
     display: flex;
     align-items: center;
@@ -66,92 +66,163 @@ body::before {
 
 /* Letter Content */
 .letter-content {
-    padding: 0 50px 50px 50px;
-    font-size: 1.1rem;
-    line-height: 32px; /* Perfect alignment with background lines */
+    padding: 0 60px 60px 60px; /* Increased horizontal padding and bottom padding */
+    font-size: 1.2rem; /* Increased from 1.1rem for better readability */
+    line-height: 36px; /* Perfect alignment with new background lines */
 }
 
 .paragraph {
-    margin: 0 0 32px 0; /* One line spacing between paragraphs */
+    margin: 0 0 36px 0; /* One line spacing between paragraphs with new spacing */
     text-align: justify;
-    text-indent: 30px;
+    text-indent: 35px; /* Increased from 30px */
     opacity: 0; /* Hide initially for typing animation */
-    line-height: 32px;
-    min-height: 32px; /* Ensure minimum height */
+    line-height: 36px; /* Updated to new line height */
+    min-height: 36px; /* Ensure minimum height with new spacing */
 }
 
 .paragraph:first-child {
     font-weight: 600;
     color: var(--primary-color);
     text-indent: 0;
-    margin-top: 32px; /* Skip one line after greeting */
+    margin-top: 36px; /* Skip one line after greeting with new spacing */
 }
 
 .closing {
-    margin: 32px 0; /* One line spacing above and below */
+    margin: 36px 0; /* One line spacing above and below with new spacing */
     font-weight: 600;
     color: var(--primary-color);
     text-indent: 0;
     opacity: 0; /* Hide initially for typing animation */
-    line-height: 32px;
+    line-height: 36px; /* Updated to new line height */
 }
 
 .signature {
     text-align: right;
-    margin: 32px 0 0 0; /* One line spacing above */
+    margin: 36px 0 0 0; /* One line spacing above with new spacing */
     font-style: italic;
     color: var(--text-dark);
     opacity: 0; /* Hide initially for typing animation */
-    line-height: 32px;
+    line-height: 36px; /* Updated to new line height */
 }
 
 .signature-name {
     font-family: 'Dancing Script', cursive;
-    font-size: 1.3rem;
+    font-size: 1.4rem; /* Increased from 1.3rem */
     font-weight: 700;
     color: var(--primary-color);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .letter-container {
+        max-width: 100%; /* Full width on tablets */
+        padding: 0 15px; /* Reduced side padding */
+    }
+    
     .letter-paper {
-        /* 28px spacing for medium screens */
+        /* 32px spacing for medium screens - better than 28px */
         background-image: repeating-linear-gradient(
             transparent,
-            transparent 27px,
-            rgba(139, 69, 19, 0.2) 27px,
-            rgba(139, 69, 19, 0.2) 28px
+            transparent 31px,
+            rgba(139, 69, 19, 0.2) 31px,
+            rgba(139, 69, 19, 0.2) 32px
         );
     }
     
     .letter-header {
-        padding: 28px 30px 0 30px;
+        padding: 32px 40px 0 40px; /* Increased from 30px */
     }
     
     .letter-content {
-        padding: 0 30px 40px 30px;
-        font-size: 1rem;
-        line-height: 28px;
-    }
-    
-    .date, .greeting, .paragraph, .closing, .signature {
-        line-height: 28px;
-        height: auto; /* Allow natural height on mobile */
+        padding: 0 40px 50px 40px; /* Increased from 30px */
+        font-size: 1.1rem; /* Increased from 1rem */
+        line-height: 32px; /* Updated to match background */
     }
     
     .date {
+        font-size: 1rem;
+        line-height: 32px;
+        height: 32px;
+    }
+    
+    .greeting {
+        font-size: 1.3rem; /* Increased from 1.2rem */
+        line-height: 32px;
+        height: 32px;
+        margin: 32px 0 0 0;
+    }
+    
+    .paragraph {
+        line-height: 32px;
+        margin: 0 0 32px 0;
+        text-indent: 25px; /* Increased from 20px */
+        min-height: 32px;
+    }
+    
+    .paragraph:first-child {
+        margin-top: 32px;
+    }
+    
+    .closing {
+        margin: 32px 0;
+        line-height: 32px;
+    }
+    
+    .signature {
+        margin: 32px 0 0 0;
+        line-height: 32px;
+    }
+    
+    .signature-name {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .letter-container {
+        padding: 0 10px; /* Minimal padding for small screens */
+    }
+    
+    .letter-paper {
+        /* Keep lines on small screens but make them lighter */
+        background-image: repeating-linear-gradient(
+            transparent,
+            transparent 27px,
+            rgba(139, 69, 19, 0.1) 27px,
+            rgba(139, 69, 19, 0.1) 28px
+        );
+        border-radius: 12px; /* Slightly smaller radius */
+    }
+    
+    .letter-header {
+        padding: 28px 25px 0 25px; /* Increased from 20px */
+    }
+    
+    .letter-content {
+        padding: 0 25px 35px 25px; /* Increased from 20px and 30px */
+        font-size: 1rem; /* Increased from 0.95rem */
+        line-height: 28px;
+    }
+    
+    .date {
+        font-size: 0.95rem; /* Increased from 0.9rem */
+        line-height: 28px;
         height: 28px;
     }
     
     .greeting {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Increased from 1.1rem */
+        line-height: 28px;
         height: 28px;
         margin: 28px 0 0 0;
     }
     
     .paragraph {
+        line-height: 28px;
         margin: 0 0 28px 0;
-        text-indent: 20px;
+        text-indent: 20px; /* Increased from 15px */
+        text-align: left;
+        min-height: 28px;
     }
     
     .paragraph:first-child {
@@ -160,60 +231,15 @@ body::before {
     
     .closing {
         margin: 28px 0;
+        line-height: 28px;
     }
     
     .signature {
         margin: 28px 0 0 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .letter-paper {
-        /* Remove lines on small screens for better readability */
-        background-image: none;
+        line-height: 28px;
     }
     
-    .letter-header {
-        padding: 24px 20px 0 20px;
-    }
-    
-    .letter-content {
-        padding: 0 20px 30px 20px;
-        font-size: 0.95rem;
-        line-height: 24px;
-    }
-    
-    .date, .greeting, .paragraph, .closing, .signature {
-        line-height: 24px;
-        height: auto;
-    }
-    
-    .date {
-        font-size: 0.9rem;
-        height: 24px;
-    }
-    
-    .greeting {
-        font-size: 1.1rem;
-        height: 24px;
-        margin: 24px 0 0 0;
-    }
-    
-    .paragraph {
-        margin: 0 0 24px 0;
-        text-indent: 15px;
-        text-align: left;
-    }
-    
-    .paragraph:first-child {
-        margin-top: 24px;
-    }
-    
-    .closing {
-        margin: 24px 0;
-    }
-    
-    .signature {
-        margin: 24px 0 0 0;
+    .signature-name {
+        font-size: 1.2rem; /* Increased from 1.1rem implied */
     }
 }
