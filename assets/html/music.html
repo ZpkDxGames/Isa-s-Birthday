@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Playlist</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/music.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i> Voltar
+    </a>
+
+    <div class="container">
+        <header class="page-header">
+            <h1 class="page-title">Playlist Interativa</h1>
+            <p class="page-subtitle">Uma playlist feita com amor 🎵</p>
+        </header>
+
+        <div class="music-player-container">
+            <!-- Playlist Header -->
+            <div class="playlist-header">
+                <div class="playlist-cover">
+                    <img src="../img/playlist-cover.webp" alt="Playlist da Isabella" id="playlistCover" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                </div>
+                <div class="playlist-info">
+                    <h2>Playlist da Isabella</h2>
+                    <p class="playlist-description">Músicas da boiadeira, eu sei que você ama!</p>
+                    <div class="playlist-stats">
+                        <span><i class="fas fa-music"></i> <span id="totalSongs">0</span> músicas</span>
+                        <span><i class="fas fa-clock"></i> <span id="totalDuration">0:00</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Music Player -->
+            <div class="music-player">
+                <div class="now-playing">
+                    <div class="song-info">
+                        <img src="../img/default-album.webp" alt="Capa do Álbum" id="currentAlbumCover" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                        <div class="song-details">
+                            <h4 id="currentSongTitle">Selecione uma música para tocar</h4>
+                            <p id="currentArtist">Artista</p>
+                        </div>
+                    </div>
+                    <div class="player-controls">
+                        <button class="control-btn" id="prevBtn">
+                            <i class="fas fa-backward"></i>
+                        </button>
+                        <button class="control-btn play-pause-btn" id="playPauseBtn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="control-btn" id="nextBtn">
+                            <i class="fas fa-forward"></i>
+                        </button>
+                    </div>
+                    <div class="volume-control">
+                        <i class="fas fa-volume-down"></i>
+                        <input type="range" id="volumeSlider" min="0" max="100" value="70">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                </div>
+                
+                <div class="progress-container">
+                    <span class="time" id="currentTime">0:00</span>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress"></div>
+                        <input type="range" id="progressSlider" min="0" max="100" value="0">
+                    </div>
+                    <span class="time" id="duration">0:00</span>
+                </div>
+            </div>
+
+            <!-- Playlist -->
+            <div class="playlist">
+                <h3>Track List</h3>
+                <div class="playlist-tracks" id="playlistTracks">
+                    <!-- Tracks will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Audio element for playback -->
+        <audio id="audioPlayer" preload="metadata"></audio>
+    </div>
+
+    <script src="../js/music.js"></script>
+</body>
+</html>

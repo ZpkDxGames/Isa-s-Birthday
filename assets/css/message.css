@@ -1,0 +1,219 @@
+/* Message page-specific background */
+body::before {
+    background-image: url('../img/backgrounds/message_page_background.webp');
+}
+
+/* Letter Container */
+.letter-container {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+.letter-paper {
+    background: #fefefe;
+    border-radius: 15px;
+    padding: 0;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15), 0 0 0 1px rgba(139, 69, 19, 0.1);
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    color: var(--text-dark);
+    /* Create notebook lines - 32px spacing */
+    background-image: repeating-linear-gradient(
+        transparent,
+        transparent 31px,
+        rgba(139, 69, 19, 0.2) 31px,
+        rgba(139, 69, 19, 0.2) 32px
+    );
+    /* Performance optimization */
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Letter Header */
+.letter-header {
+    padding: 32px 50px 0 50px; /* Start exactly on first line */
+    margin: 0;
+}
+
+.date {
+    text-align: right;
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    line-height: 32px; /* Match line spacing exactly */
+    height: 32px; /* Occupy exactly one line */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.greeting {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    font-family: 'Dancing Script', cursive;
+    opacity: 0; /* Hide initially for typing animation */
+    line-height: 32px; /* Match line spacing exactly */
+    height: 32px; /* Occupy exactly one line */
+    margin: 32px 0 0 0; /* Skip one line */
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Letter Content */
+.letter-content {
+    padding: 0 50px 50px 50px;
+    font-size: 1.1rem;
+    line-height: 32px; /* Perfect alignment with background lines */
+}
+
+.paragraph {
+    margin: 0 0 32px 0; /* One line spacing between paragraphs */
+    text-align: justify;
+    text-indent: 30px;
+    opacity: 0; /* Hide initially for typing animation */
+    line-height: 32px;
+    min-height: 32px; /* Ensure minimum height */
+}
+
+.paragraph:first-child {
+    font-weight: 600;
+    color: var(--primary-color);
+    text-indent: 0;
+    margin-top: 32px; /* Skip one line after greeting */
+}
+
+.closing {
+    margin: 32px 0; /* One line spacing above and below */
+    font-weight: 600;
+    color: var(--primary-color);
+    text-indent: 0;
+    opacity: 0; /* Hide initially for typing animation */
+    line-height: 32px;
+}
+
+.signature {
+    text-align: right;
+    margin: 32px 0 0 0; /* One line spacing above */
+    font-style: italic;
+    color: var(--text-dark);
+    opacity: 0; /* Hide initially for typing animation */
+    line-height: 32px;
+}
+
+.signature-name {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .letter-paper {
+        /* 28px spacing for medium screens */
+        background-image: repeating-linear-gradient(
+            transparent,
+            transparent 27px,
+            rgba(139, 69, 19, 0.2) 27px,
+            rgba(139, 69, 19, 0.2) 28px
+        );
+    }
+    
+    .letter-header {
+        padding: 28px 30px 0 30px;
+    }
+    
+    .letter-content {
+        padding: 0 30px 40px 30px;
+        font-size: 1rem;
+        line-height: 28px;
+    }
+    
+    .date, .greeting, .paragraph, .closing, .signature {
+        line-height: 28px;
+        height: auto; /* Allow natural height on mobile */
+    }
+    
+    .date {
+        height: 28px;
+    }
+    
+    .greeting {
+        font-size: 1.2rem;
+        height: 28px;
+        margin: 28px 0 0 0;
+    }
+    
+    .paragraph {
+        margin: 0 0 28px 0;
+        text-indent: 20px;
+    }
+    
+    .paragraph:first-child {
+        margin-top: 28px;
+    }
+    
+    .closing {
+        margin: 28px 0;
+    }
+    
+    .signature {
+        margin: 28px 0 0 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .letter-paper {
+        /* Remove lines on small screens for better readability */
+        background-image: none;
+    }
+    
+    .letter-header {
+        padding: 24px 20px 0 20px;
+    }
+    
+    .letter-content {
+        padding: 0 20px 30px 20px;
+        font-size: 0.95rem;
+        line-height: 24px;
+    }
+    
+    .date, .greeting, .paragraph, .closing, .signature {
+        line-height: 24px;
+        height: auto;
+    }
+    
+    .date {
+        font-size: 0.9rem;
+        height: 24px;
+    }
+    
+    .greeting {
+        font-size: 1.1rem;
+        height: 24px;
+        margin: 24px 0 0 0;
+    }
+    
+    .paragraph {
+        margin: 0 0 24px 0;
+        text-indent: 15px;
+        text-align: left;
+    }
+    
+    .paragraph:first-child {
+        margin-top: 24px;
+    }
+    
+    .closing {
+        margin: 24px 0;
+    }
+    
+    .signature {
+        margin: 24px 0 0 0;
+    }
+}

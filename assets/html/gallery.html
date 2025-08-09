@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/gallery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i> Voltar
+    </a>
+
+    <div class="container">
+        <header class="page-header">
+            <h1 class="page-title">Galeria Interativa</h1>
+            <p class="page-subtitle">Uma coleção de momentos especiais 📸</p>
+        </header>
+
+        <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">Tudo</button>
+            <button class="filter-btn" data-filter="friends">Amigos</button>
+            <button class="filter-btn" data-filter="nature">Natureza</button>
+            <button class="filter-btn" data-filter="dodgeram">Dodge RAM</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Friends Photos -->
+            <div class="gallery-item" data-category="friends">
+                <img src="../img/photos/gallery/friends/photo_1.webp" alt="Momento com amigos" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Friends</h3>
+                        <p>Assim, +70% segue firme 💪🏻</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="friends">
+                <img src="../img/photos/gallery/friends/photo_2.webp" alt="Encontro de amigos" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Bons Momentos</h3>
+                        <p>Mesmo naqueles momentos que dá vontade de matar um ou ao outro 😊</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="friends">
+                <img src="../img/photos/gallery/friends/photo_3.webp" alt="Celebração com amigos" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Fotinha</h3>
+                        <p>FILHA DA PUTAGEM EU TER FICADO DE OLHO FECHADO</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="friends">
+                <img src="../img/photos/gallery/friends/photo_4.webp" alt="Aventura com amigos" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Terror no rotta</h3>
+                        <p>Os bicho corria quando a gente chegava 💖</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="friends">
+                <img src="../img/photos/gallery/friends/photo_5.webp" alt="Diversão com amigos" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>✌🏻</h3>
+                        <p>9°ano mais resenha de todos</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item wide" data-category="friends">
+                <img src="../img/photos/gallery/friends/photo_6.webp" alt="Grupo de amigos" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Virgem Isabella</h3>
+                        <p>Que Deus a tenha, que venha com saúde 🙏🏻</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="friends">
+                <img src="../img/photos/gallery/friends/photo_7.webp" alt="Momento com amigos" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Trio terrorista</h3>
+                        <p>Eu apanhei muito dessas 3</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="friends">
+                <img src="../img/photos/gallery/friends/photo_8.webp" alt="Alegria com amigos" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>✌🏻😃</h3>
+                        <p>Amiga Raphaela</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="friends">
+                <img src="../img/photos/gallery/friends/photo_9.webp" alt="Laço com amigos" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>VAI BOZOOOO</h3>
+                        <p>Não era copa do mundo, uai</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="friends">
+                <img src="../img/photos/gallery/friends/photo_10.webp" alt="Tempo com amigos" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Mais que amigos, friends</h3>
+                        <p>O trio que segue sobrevivendo ao tempo</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="friends">
+                <img src="../img/photos/gallery/friends/photo_11.webp" alt="Memória com amigos" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Pessoa Especial</h3>
+                        <p>Aquela que considero como uma irmã de outra mãe ✌🏻💖</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item tall" data-category="friends">
+                <img src="../img/photos/gallery/friends/photo_12.webp" alt="Retrato de amigos" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>A mimir</h3>
+                        <p>Aquele dia foi lokooo</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="friends">
+                <img src="../img/photos/gallery/friends/photo_13.webp" alt="Sorrisos de amigos" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Perestroyka</h3>
+                        <p>Irradiando felicidade...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="friends">
+                <img src="../img/photos/gallery/friends/photo_14.webp" alt="Amor entre amigos" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Mariana em choque</h3>
+                        <p>Provavelmente a única sóbria da escola</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="friends">
+                <img src="../img/photos/gallery/friends/photo_15.webp" alt="Conexão de amigos" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Nossa segunda casa</h3>
+                        <p>Eterna, Porto Alegre - Uberaba MG</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="friends">
+                <img src="../img/photos/gallery/friends/photo_16.webp" alt="Magia de amigos" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Nosso quarteto fantástico</h3>
+                        <p>Minha foto favorita, não perco por nada...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="friends">
+                <img src="../img/photos/gallery/friends/photo_17.webp" alt="Energia de amigos" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Gigante, Jurema 🖤</h3>
+                        <p>Que os campos do Vasco sejam receptivos à ela</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="friends">
+                <img src="../img/photos/gallery/friends/photo_18.webp" alt="Unidade de amigos" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Picture recente</h3>
+                        <p>Como os anos passam, mas certas amizades permanecem!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="friends">
+                <img src="../img/photos/gallery/friends/photo_19.webp" alt="Amigos para sempre" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Mais um ano</h3>
+                        <p>Como sobreviventes 💪🏻💪🏻💪🏻</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Fotos da Natureza -->
+            <div class="gallery-item wide" data-category="nature">
+                <img src="../img/photos/gallery/nature/photo_1.webp" alt="Natureza bela" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Beleza da Natureza</h3>
+                        <p>Conectada com o mundo natural</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="nature">
+                <img src="../img/photos/gallery/nature/photo_2.webp" alt="Aventura na natureza" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Coração Selvagem</h3>
+                        <p>Em harmonia com a natureza</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="nature">
+                <img src="../img/photos/gallery/nature/photo_3.webp" alt="Serenidade na natureza" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Alma Pacífica</h3>
+                        <p>Encontrando tranquilidade</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item tall" data-category="nature">
+                <img src="../img/photos/gallery/nature/photo_4.webp" alt="Exploração da natureza" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Espírito Explorador</h3>
+                        <p>Descobrindo maravilhas</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="nature">
+                <img src="../img/photos/gallery/nature/photo_5.webp" alt="Harmonia na natureza" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Harmonia Perfeita</h3>
+                        <p>Vivendo em equilíbrio</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="nature">
+                <img src="../img/photos/gallery/nature/photo_6.webp" alt="Felicidade na natureza" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Felicidade Natural</h3>
+                        <p>Pura alegria</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="nature">
+                <img src="../img/photos/gallery/nature/photo_7.webp" alt="Liberdade na natureza" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Espírito Livre</h3>
+                        <p>Abraçando a liberdade</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="nature">
+                <img src="../img/photos/gallery/nature/photo_8.webp" alt="Maravilha da natureza" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Maravilha & Admiração</h3>
+                        <p>Encantada pela criação</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="nature">
+                <img src="../img/photos/gallery/nature/photo_9.webp" alt="Paz na natureza" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Paz Interior</h3>
+                        <p>Calma e centrada</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="nature">
+                <img src="../img/photos/gallery/nature/photo_10.webp" alt="Conexão com a natureza" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Conexão Profunda</h3>
+                        <p>Uma com a terra</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Fotos Dodge RAM -->
+            <div class="gallery-item wide" data-category="dodgeram">
+                <img src="../img/photos/gallery/dodgeram/photo_1.webp" alt="Dodge RAM" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Poder & Estilo</h3>
+                        <p>A fera sobre rodas</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="dodgeram">
+                <img src="../img/photos/gallery/dodgeram/photo_2.webp" alt="Caminhão RAM" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Pronta para a Estrada</h3>
+                        <p>Construída para aventura</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="dodgeram">
+                <img src="../img/photos/gallery/dodgeram/photo_3.webp" alt="Poder RAM" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Poder Bruto</h3>
+                        <p>Liberando a fera</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item tall" data-category="dodgeram">
+                <img src="../img/photos/gallery/dodgeram/photo_4.webp" alt="Design RAM" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Design Audaz</h3>
+                        <p>Se destacando da multidão</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="dodgeram">
+                <img src="../img/photos/gallery/dodgeram/photo_5.webp" alt="Força RAM" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Construção Sólida</h3>
+                        <p>Resistente como aço</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="dodgeram">
+                <img src="../img/photos/gallery/dodgeram/photo_6.webp" alt="Performance RAM" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Fera de Performance</h3>
+                        <p>Excelência da engenharia</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="dodgeram">
+                <img src="../img/photos/gallery/dodgeram/photo_7.webp" alt="Atitude RAM" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Atitude</h3>
+                        <p>Fazendo uma declaração</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="dodgeram">
+                <img src="../img/photos/gallery/dodgeram/photo_8.webp" alt="RAM resistente" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Beleza Robusta</h3>
+                        <p>Forma encontra função</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="dodgeram">
+                <img src="../img/photos/gallery/dodgeram/photo_9.webp" alt="Liberdade RAM" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Máquina da Liberdade</h3>
+                        <p>Vá onde quiser, faça tudo</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item" data-category="dodgeram">
+                <img src="../img/photos/gallery/dodgeram/photo_10.webp" alt="Legado RAM" loading="lazy" draggable="false" oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>Legado</h3>
+                        <p>Construída para durar para sempre</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="load-more-container">
+            <button class="load-more-btn" id="loadMoreBtn">
+                <i class="fas fa-plus"></i> Carregar Mais Memórias
+            </button>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img class="modal-image" id="modalImage" src="" alt="">
+            <div class="modal-navigation">
+                <button class="nav-btn prev-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="nav-btn next-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="modal-caption">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/gallery.js"></script>
+</body>
+</html>
